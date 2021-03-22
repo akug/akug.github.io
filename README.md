@@ -5,7 +5,7 @@ A Github Pages template for academic websites. This was forked (then detached) b
 # Instructions
 
 General info: `_config.yaml`
-publications: `./markdown_generator/pubs.bib`; generates contents of `./_publications`; This has to be run manually!
+publications: `./markdown_generator/pubs.bib`; generates contents of `./_publications`; This has to be run manually! Also, I added the `<b>` tag manually afterwards for my name
 
 
 ## To run locally (not on GitHub Pages, to serve on your own computer)

@@ -12,12 +12,6 @@ redirect_from:
 Education
 ======
 
-Work experience
-======
-
-Skills
-======
-
 Publications
 ======
   <ul>{% for post in site.publications %}
