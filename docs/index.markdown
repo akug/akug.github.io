@@ -5,7 +5,7 @@
 layout: page
 ---
 
-<img src="/assets/images/spaceship.png" float="left" height="200px" alt="A spaceship in the style of Vincent van Gogh, generated with StableDiffusion-XL"> 
+<img src="/assets/images/profile/20240831_111339_1.jpg" float="left" height="300px" alt="profile picture">
 
 Deep Learning Engineer at the Bosch Center for Artificial Intelligence (BCAI). If you are interested to chat, reach out to me on [LinkedIn](https://www.linkedin.com/in/alexander-kugele/), [Github](https://github.com/akug), or Twitter/X (`@{{ site.twitter_username }}`).
 

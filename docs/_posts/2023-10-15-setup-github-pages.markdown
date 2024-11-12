@@ -21,14 +21,16 @@ Therefore, I used the [jekyll-remote-theme](https://github.com/benbalter/jekyll-
 
 I used [asdf](https://asdf-vm.com/guide/getting-started.html) to install ruby
 {% highlight bash %}
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+export _ASDFVERSION=v0.14.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch _ASDFVERSION
 echo '. "$HOME/.asdf/asdf.sh"' >> ~/.bashrc
 echo '. "$HOME/.asdf/completions/asdf.bash"' >> ~/.bashrc
 # restart terminal
 asdf plugin add ruby
 asdf plugin add nodejs
-asdf install ruby 3.2.2 # this can take some time
-asdf global ruby 3.2.2
+export _RUBYVERSION=3.3.6
+asdf install ruby $_RUBYVERSION # this can take some time
+asdf global ruby $_RUBYVERSION
 gem update --system
 gem install bundler jekyll
 {% endhighlight %}
@@ -40,6 +42,22 @@ gem -v
 gcc -v
 g++ -v
 make -v
+{% endhighlight %}
+
+## Update
+
+{% highlight bash %}
+rm -rf ~/.asdf
+# (manually) update the github-pages version in the Gemfile
+export _ASDFVERSION=v0.14.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch _ASDFVERSION
+asdf plugin add ruby
+asdf plugin add nodejs
+export _RUBYVERSION=3.3.6
+asdf install ruby $_RUBYVERSION # this can take some time
+asdf global ruby $_RUBYVERSION
+gem update --system
+gem install bundler jekyll
 {% endhighlight %}
 
 ## Testing locally
