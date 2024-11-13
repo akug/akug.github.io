@@ -19,10 +19,15 @@ Therefore, I used the [jekyll-remote-theme](https://github.com/benbalter/jekyll-
 
 ## Installation
 
+Prelim: On newer Ubuntu versions (>20.04), you first need to install additional dependencies:
+{% highlight bash %}
+sudo apt install build-essential libxml2 libssl-dev libffi-dev libffi8 libyaml-dev libreadline-dev
+{% endhighlight %}
+
 I used [asdf](https://asdf-vm.com/guide/getting-started.html) to install ruby
 {% highlight bash %}
 export _ASDFVERSION=v0.14.1
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch _ASDFVERSION
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $_ASDFVERSION
 echo '. "$HOME/.asdf/asdf.sh"' >> ~/.bashrc
 echo '. "$HOME/.asdf/completions/asdf.bash"' >> ~/.bashrc
 # restart terminal
@@ -50,7 +55,7 @@ make -v
 rm -rf ~/.asdf
 # (manually) update the github-pages version in the Gemfile
 export _ASDFVERSION=v0.14.1
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch _ASDFVERSION
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $_ASDFVERSION
 asdf plugin add ruby
 asdf plugin add nodejs
 export _RUBYVERSION=3.3.6
@@ -61,6 +66,10 @@ gem install bundler jekyll
 {% endhighlight %}
 
 ## Testing locally
+
+Change to the docs folder: `cd docs`.
+
+First time: `bundle install`.
 
 If testing locally, don't forget to regularly update github-pages: `bundle update github-pages`.
 
